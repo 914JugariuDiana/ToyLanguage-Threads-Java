@@ -1,0 +1,36 @@
+package Domain.Value;
+
+import Domain.Type.BoolType;
+import Domain.Type.Type;
+
+public class BoolValue implements Value{
+
+    private boolean value;
+
+    public BoolValue(boolean v){
+        value = v;
+    }
+
+    public BoolValue(){
+        value = false;
+    }
+    public boolean getVal(){
+        return value;
+    }
+
+    public String toString(){
+        if (value)
+            return "true";
+        return "false";
+    }
+
+    @Override
+    public Type getType() {
+        return new BoolType();
+    }
+
+    @Override
+    public Value deepCopy() {
+        return new BoolValue(value);
+    }
+}
