@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.aa7.MainWindowController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Button fx:id="execButton" layoutX="833.0" layoutY="195.0" mnemonicParsing="false" onAction="#oneStepHandler" text="OneStep" />
+        <Label fx:id="progStatesCount" layoutX="55.0" layoutY="38.0" text="No of ProgStates:0 " />
+        <TableView fx:id="heapTableView" layoutX="14.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="heapTableAddr" prefWidth="75.0" text="Addr" />
+                <TableColumn fx:id="heapTableValues" prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <ListView fx:id="outputView" layoutX="214.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="fileTableView" layoutX="407.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="progIdentifiersView" layoutX="607.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" />
+        <Label layoutX="90.0" layoutY="77.0" text="Heap" />
+        <Label layoutX="288.0" layoutY="77.0" text="Output" />
+        <Label layoutX="484.0" layoutY="77.0" text="FileTable" />
+        <Label layoutX="693.0" layoutY="77.0" text="Ids" />
+        <ListView fx:id="exeStackVIew" layoutX="433.0" layoutY="371.0" prefHeight="200.0" prefWidth="200.0" />
+        <TableView fx:id="symbolTableView" layoutX="207.0" layoutY="371.0" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="symTableNames" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="symTableValues" prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <Label layoutX="266.0" layoutY="332.0" text="SymbolTable" />
+        <Label layoutX="510.0" layoutY="332.0" text="ExeStack" />
+        <TableView fx:id="semaphoreTableView" layoutX="679.0" layoutY="371.0" prefHeight="200.0" prefWidth="251.0">
+            <columns>
+                <TableColumn fx:id="indexColumn" prefWidth="75.0" text="Index" />
+                <TableColumn fx:id="valueColumn" prefWidth="75.0" text="Value" />
+                <TableColumn fx:id="listColumn" prefWidth="75.0" text="List" />
+            </columns>
+        </TableView>
+        <Label layoutX="740.0" layoutY="332.0" text="Semaphore Table" />
+    </children>
+</AnchorPane>
